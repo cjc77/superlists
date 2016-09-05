@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+
+# all lists views imported as: lists_views.view_name
 from lists import views as lists_views
 
 urlpatterns = [
