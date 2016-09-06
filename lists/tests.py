@@ -3,6 +3,8 @@ from django.core.urlresolvers import resolve
 from django.test import TestCase
 from django.http import HttpRequest
 
+from lists.models import Item
+
 # Get rid of csrf_token for comparison -----------------------------------------
 import re
 # ------------------------------------------------------------------------------
@@ -49,3 +51,7 @@ class HomePageTest(TestCase):
         # ----------------------------------------------------------------------
 
         self.assertEqual(observed_html, expected_html)
+
+class ItemModelTest(TestCase):
+
+    def test_saving_and_retrieving_items(self):
