@@ -9,9 +9,9 @@ class NewVisitorTest(unittest.TestCase):
     def setUp(self):
         # Chrome driver must be installed - insert PATH on your system
         # OSX
-        # self.browser = webdriver.Chrome('/users/carsoncook/Downloads/chromedriver')
+        self.browser = webdriver.Chrome('/users/carsoncook/Downloads/chromedriver')
         # Linux
-        self.browser = webdriver.Chrome('/home/carsoncook/Downloads/chromedriver')
+        # self.browser = webdriver.Chrome('/home/carsoncook/Downloads/chromedriver')
         self.browser.implicitly_wait(3)
 
     def tearDown(self):
