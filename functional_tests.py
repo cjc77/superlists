@@ -59,5 +59,9 @@ class NewVisitorTest(unittest.TestCase):
         self.check_for_row_in_list_table('1: Buy peacock feathers')
         self.check_for_row_in_list_table('2: Use peacock feathers to make a fly')
 
+        time.sleep(10)
+
+        self.fail('Finish the test!')
+
 if __name__ == '__main__':
     unittest.main()
