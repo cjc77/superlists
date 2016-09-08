@@ -10,9 +10,9 @@ class NewVisitorTest(LiveServerTestCase):
     def setUp(self):
         # Chrome driver must be installed - insert PATH on your system
         # OSX
-        # self.browser = webdriver.Chrome('/users/carsoncook/Downloads/chromedriver')
+        self.browser = webdriver.Chrome('/users/carsoncook/Downloads/chromedriver')
         # Linux
-        self.browser = webdriver.Chrome('/home/carsoncook/Downloads/chromedriver')
+        # self.browser = webdriver.Chrome('/home/carsoncook/Downloads/chromedriver')
         self.browser.implicitly_wait(3)
 
     def tearDown(self):
@@ -68,9 +68,9 @@ class NewVisitorTest(LiveServerTestCase):
         ## of Edith's is coming through from cookies etc.
         self.browser.quit()
         #OSx
-        # self.browser = webdriver.Chrome('/users/carsoncook/Downloads/chromedriver')
+        self.browser = webdriver.Chrome('/users/carsoncook/Downloads/chromedriver')
         # Linux
-        self.browser = webdriver.Chrome('/home/carsoncook/Downloads/chromedriver')
+        # self.browser = webdriver.Chrome('/home/carsoncook/Downloads/chromedriver')
 
         # Francis visits the home page. There's no sign of Edith's list
         self.browser.get(self.live_server_url)
@@ -96,7 +96,9 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Satisfied, they both go back to sleep
 
-        self.fail('Finish the test!')
+        time.sleep(5)
+
+        # self.fail('Finish the test!')
 
 if __name__ == '__main__':
     unittest.main()
